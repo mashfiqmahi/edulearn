@@ -4,7 +4,8 @@ import os
 
 SECRET_KEY = config('SECRET_KEY')
 CSRF_TRUSTED_ORIGINS = ['https://web-production-5068.up.railway.app']
-
+DEBUG = False
+ALLOWED_HOSTS = ['https://web-production-5068.up.railway.app']
 DATABASE = {
     'ENGINE':'django.db.backends.postgresql_psycopg2',
     'NAME': config('DATABASE_NAME'),
