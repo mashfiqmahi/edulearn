@@ -1,0 +1,14 @@
+{% extends 'courses/base.html' %}  <!-- Extend the base.html template -->
+
+{% block title %}Students Enrolled in {{ course.name }}{% endblock %}  <!-- Set the title block -->
+
+{% block content %}  <!-- Place your content inside the content block -->
+<div class="container">
+    <h1 class="mt-4">Students Enrolled in {{ course.title }}</h1>
+    <ul class="list-group">
+        {% for student in students %}
+            <li class="list-group-item">{{ student.name }} - {{ student.email }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
